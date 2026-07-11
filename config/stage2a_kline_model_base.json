@@ -1,0 +1,18 @@
+{
+  "input_path": "data/processed/BTCUSDT_spot_klines_1m_clean.parquet",
+  "output_path": "data/interim/BTCUSDT_kline_model_base_1m.parquet",
+  "report_path": "reports/stage2a_kline_model_base_report.md",
+  "log_path": "reports/stage2a_kline_model_base.log",
+  "segment_summary_path": "reports/stage2a_segment_summary.csv",
+  "candidate_summary_by_month_path": "reports/stage2a_candidate_summary_by_month.csv",
+  "candidate_summary_by_year_path": "reports/stage2a_candidate_summary_by_year.csv",
+  "expected_interval_ms": 60000,
+  "prediction_interval_minutes": 5,
+  "history_windows_minutes": [5, 15, 30, 60, 120, 240],
+  "maximum_history_minutes": 240,
+  "future_windows_minutes": [1, 60, 61],
+  "future_required_minutes": 61,
+  "floating_absolute_tolerance": 1e-10,
+  "floating_relative_tolerance": 1e-9,
+  "parquet_compression": "zstd"
+}

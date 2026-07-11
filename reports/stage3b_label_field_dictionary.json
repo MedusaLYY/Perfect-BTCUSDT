@@ -1,0 +1,263 @@
+{
+  "fields": [
+    {
+      "name": "feature_open_time",
+      "dtype": "int64",
+      "definition": "Current feature Kline open_time in Unix milliseconds.",
+      "unit": "Unix milliseconds",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "decision_time",
+      "dtype": "int64",
+      "definition": "Prediction decision time, feature_open_time + expected_interval_ms.",
+      "unit": "Unix milliseconds",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "entry_minute_open_time",
+      "dtype": "int64",
+      "definition": "Entry proxy minute open_time, equal to decision_time.",
+      "unit": "Unix milliseconds",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "settlement_minute_open_time",
+      "dtype": "int64",
+      "definition": "Settlement proxy minute open_time, entry_minute_open_time + 60 minutes.",
+      "unit": "Unix milliseconds",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "continuity_segment_id",
+      "dtype": "int64",
+      "definition": "Stage 2A continuous one-minute Kline segment id for the feature row.",
+      "unit": "segment id",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "is_prediction_time_5m",
+      "dtype": "bool",
+      "definition": "Whether decision_time falls on the configured 5-minute prediction grid.",
+      "unit": "boolean",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "has_history_240m",
+      "dtype": "bool",
+      "definition": "Stage 2A flag that the feature row has the required 240-minute history inside the segment.",
+      "unit": "boolean",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "has_future_61m",
+      "dtype": "bool",
+      "definition": "Stage 2A flag that the feature row has 61 future one-minute rows inside the segment.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "is_model_candidate",
+      "dtype": "bool",
+      "definition": "Stage 2A candidate flag based on prediction grid, history, future horizon, and continuity constraints.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "has_entry_price_proxy",
+      "dtype": "bool",
+      "definition": "Whether the exact entry minute Kline open proxy price is present.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "has_settlement_price_proxy",
+      "dtype": "bool",
+      "definition": "Whether the exact settlement minute Kline open proxy price is present.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "same_continuity_segment",
+      "dtype": "bool",
+      "definition": "Whether feature, entry, and settlement minutes are in the same Stage 2A continuity segment.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "exact_horizon_match",
+      "dtype": "bool",
+      "definition": "Whether entry and settlement rows exist and settlement_minute_open_time - entry_minute_open_time equals exactly 60 minutes.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "is_valid_proxy_label",
+      "dtype": "bool",
+      "definition": "Whether exact proxy prices exist, are finite positive, share the same continuity segment, and have an exact 60-minute horizon.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "is_final_model_label_candidate",
+      "dtype": "bool",
+      "definition": "is_model_candidate and is_valid_proxy_label are both true.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "entry_price_proxy",
+      "dtype": "float64",
+      "definition": "Kline open engineering proxy price for the entry minute; not a real order fill or true execution price.",
+      "unit": "USDT per BTC",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "settlement_price_proxy",
+      "dtype": "float64",
+      "definition": "Kline open engineering proxy price for the settlement minute; not a real order fill or true execution price.",
+      "unit": "USDT per BTC",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "future_simple_return_60m",
+      "dtype": "float64",
+      "definition": "settlement_price_proxy / entry_price_proxy - 1 for valid proxy labels.",
+      "unit": "ratio",
+      "may_use_future_data": true,
+      "is_model_label": true,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "future_log_return_60m",
+      "dtype": "float64",
+      "definition": "Natural log of settlement_price_proxy / entry_price_proxy for valid proxy labels.",
+      "unit": "log ratio",
+      "may_use_future_data": true,
+      "is_model_label": true,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "label_up_60m",
+      "dtype": "nullable int8",
+      "definition": "Nullable binary label: 1 when settlement_price_proxy > entry_price_proxy, otherwise 0; equal prices are 0.",
+      "unit": "0/1",
+      "may_use_future_data": true,
+      "is_model_label": true,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "absolute_future_return_bps",
+      "dtype": "float64",
+      "definition": "abs(future_simple_return_60m) * 10000 for proxy boundary diagnostics.",
+      "unit": "basis points",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "proxy_margin_bucket",
+      "dtype": "string",
+      "definition": "Configured absolute_future_return_bps bucket for proxy boundary risk diagnostics.",
+      "unit": "basis point bucket",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "proxy_boundary_risk_1bps",
+      "dtype": "bool",
+      "definition": "Diagnostic flag where absolute_future_return_bps < 1; does not modify the main binary label.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "proxy_boundary_risk_2_5bps",
+      "dtype": "bool",
+      "definition": "Diagnostic flag where absolute_future_return_bps < 2.5; does not modify the main binary label.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "proxy_boundary_risk_5bps",
+      "dtype": "bool",
+      "definition": "Diagnostic flag where absolute_future_return_bps < 5; does not modify the main binary label.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "proxy_boundary_risk_10bps",
+      "dtype": "bool",
+      "definition": "Diagnostic flag where absolute_future_return_bps < 10; does not modify the main binary label.",
+      "unit": "boolean",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "sample_weight_uniform",
+      "dtype": "float64",
+      "definition": "Diagnostic uniform sample weight set to 1.0; Stage 3B does not train or select weights.",
+      "unit": "weight",
+      "may_use_future_data": false,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    },
+    {
+      "name": "sample_weight_margin",
+      "dtype": "float64",
+      "definition": "Diagnostic margin-based weight clipped from absolute_future_return_bps; use in later experiments only after rolling validation.",
+      "unit": "weight",
+      "may_use_future_data": true,
+      "is_model_label": false,
+      "allowed_as_model_input": false
+    }
+  ],
+  "notes": [
+    "Stage 3B uses Kline open only as an engineering proxy price, not as a real order fill or true execution price.",
+    "The proxy was validated only in the 2022-09-02 to 2022-09-04 agg trades overlap window of about 66.77 hours.",
+    "Stage 3A found about 98.23% overall agreement between Kline open and first-5-second VWAP labels, with differences concentrated below 5 bps absolute 60-minute return.",
+    "Do not assume 2017-2026 all have exactly the same proxy error.",
+    "No field in this Stage 3B output is allowed directly into a model feature matrix."
+  ]
+}

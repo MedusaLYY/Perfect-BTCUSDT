@@ -1,0 +1,17 @@
+{
+  "model_name": "momentum_60m_baseline_final",
+  "alpha": 1.0,
+  "positive_group": {
+    "group_count": 387028,
+    "up_count": 184300,
+    "p_up": 0.4761930599695114
+  },
+  "nonpositive_group": {
+    "group_count": 372199,
+    "up_count": 202605,
+    "p_up": 0.5443456626930073
+  },
+  "training_sample_count": 759227,
+  "training_role": "DEVELOPMENT",
+  "hard_class_rule": "log_return_60m > 0"
+}

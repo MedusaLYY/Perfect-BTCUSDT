@@ -1,0 +1,44 @@
+{
+  "agg_input_path": "data/processed/BTCUSDT_spot_agg_trades_clean.parquet",
+  "kline_input_path": "data/processed/BTCUSDT_spot_klines_1m_clean.parquet",
+  "agg_1m_output_path": "data/interim/BTCUSDT_agg_trades_1m_base.parquet",
+  "overlap_output_path": "data/interim/BTCUSDT_agg_kline_overlap_1m.parquet",
+  "report_paths": {
+    "aggregation": "reports/stage2b_agg_1m_aggregation_report.md",
+    "consistency": "reports/stage2b_agg_kline_consistency_report.md",
+    "execution_proxy": "reports/stage2b_execution_price_proxy_report.md",
+    "consistency_by_hour": "reports/stage2b_agg_kline_consistency_by_hour.csv",
+    "largest_volume_errors": "reports/stage2b_largest_volume_errors.csv",
+    "largest_price_errors": "reports/stage2b_largest_price_errors.csv",
+    "id_gap_error_analysis": "reports/stage2b_id_gap_error_analysis.csv",
+    "unmatched_minutes": "reports/stage2b_unmatched_minutes.csv"
+  },
+  "log_path": "reports/stage2b_agg_kline.log",
+  "expected_interval_ms": 60000,
+  "execution_windows_seconds": {
+    "first": [1, 2, 5, 10],
+    "last": [1, 5]
+  },
+  "floating_absolute_tolerance": 1e-10,
+  "floating_relative_tolerance": 1e-9,
+  "epsilon": 1e-12,
+  "warning_thresholds": {
+    "volume_relative_error": 0.01,
+    "price_error_bps": 1.0
+  },
+  "severe_thresholds": {
+    "volume_relative_error": 0.05,
+    "price_error_bps": 5.0
+  },
+  "reliability_rule": {
+    "exclude_boundary_partial_minute": true,
+    "require_both_sources": true,
+    "max_base_volume_relative_error": 0.01,
+    "max_quote_volume_relative_error": 0.01,
+    "max_price_error_bps": 5.0,
+    "require_first_5s_trade": true,
+    "disallow_connection_anomaly": true
+  },
+  "parquet_compression": "zstd",
+  "largest_error_rows": 100
+}

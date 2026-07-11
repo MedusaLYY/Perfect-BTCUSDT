@@ -1,0 +1,85 @@
+{
+  "dataset_path": "data/model/BTCUSDT_60m_direction_dataset_v1.parquet",
+  "split_path": "data/splits/BTCUSDT_60m_split_assignments_v1.parquet",
+  "dataset_manifest_path": "reports/stage5_dataset_manifest.json",
+  "fold_manifest_path": "reports/stage5_cv_fold_manifest.json",
+  "feature_manifest_path": "reports/stage4_feature_manifest.json",
+  "prediction_output_path": "data/predictions/BTCUSDT_stage6_cv_baseline_predictions.parquet",
+  "model_output_dir": "models/stage6_baselines",
+  "report_paths": {
+    "main_report": "reports/stage6_baseline_model_report.md",
+    "metrics_by_fold": "reports/stage6_metrics_by_fold.csv",
+    "metrics_by_subset": "reports/stage6_metrics_by_subset.csv",
+    "metrics_by_offset": "reports/stage6_metrics_by_offset.csv",
+    "oof_summary": "reports/stage6_oof_summary.csv",
+    "calibration_equal_width": "reports/stage6_calibration_equal_width.csv",
+    "calibration_equal_frequency": "reports/stage6_calibration_equal_frequency.csv",
+    "logistic_coefficients_by_fold": "reports/stage6_logistic_coefficients_by_fold.csv",
+    "logistic_coefficient_stability": "reports/stage6_logistic_coefficient_stability.csv",
+    "preprocessing_audit": "reports/stage6_preprocessing_audit.json",
+    "model_manifest": "reports/stage6_model_manifest.json"
+  },
+  "log_path": "reports/stage6_baseline_training.log",
+  "fold_names": [
+    "fold_2020",
+    "fold_2021",
+    "fold_2022",
+    "fold_2023",
+    "fold_2024"
+  ],
+  "model_definitions": {
+    "prior_baseline": "Fold TRAIN label prior probability with no feature input.",
+    "momentum_60m_baseline": "Past 60 minute direction continuation hard rule using log_return_60m and TRAIN-only Laplace-smoothed conditional probabilities.",
+    "logistic_regression_l2": "StandardScaler fitted on fold TRAIN only followed by fixed-parameter L2 LogisticRegression."
+  },
+  "logistic_regression_parameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "fit_intercept": true,
+    "class_weight": null,
+    "max_iter": 2000,
+    "tol": 0.000001,
+    "random_state": 42,
+    "n_jobs": null
+  },
+  "scaler_parameters": {
+    "with_mean": true,
+    "with_std": true
+  },
+  "fixed_prediction_threshold": 0.5,
+  "momentum_baseline_alpha": 1.0,
+  "evaluation_subsets": {
+    "dense": "DENSE",
+    "nonoverlap": "NONOVERLAP_OFFSET_00",
+    "offsets": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55
+    ],
+    "margin_subsets": [
+      "ALL_MARGINS",
+      "ABS_RETURN_GE_1BPS",
+      "ABS_RETURN_GE_2_5BPS",
+      "ABS_RETURN_GE_5BPS",
+      "ABS_RETURN_GE_10BPS"
+    ]
+  },
+  "calibration_bins": 10,
+  "random_seed": 42,
+  "numeric_tolerances": {
+    "scaler_atol": 1e-12,
+    "prediction_atol": 1e-12
+  },
+  "parquet_compression": "zstd",
+  "hash_algorithm": "sha256"
+}

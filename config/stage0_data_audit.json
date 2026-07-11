@@ -1,0 +1,29 @@
+{
+  "random_seed": 42,
+  "timezone": "UTC",
+  "datasets": {
+    "klines": {
+      "candidate_paths": [
+        "data/raw/BTCUSDT_spot_klines_1m.csv",
+        "data/raw/binance/BTCUSDT_spot_klines_1m.csv"
+      ]
+    },
+    "agg_trades": {
+      "candidate_paths": [
+        "data/raw/BTCUSDT_spot_agg_trades.csv",
+        "data/raw/binance/BTCUSDT_spot_agg_trades.csv"
+      ]
+    }
+  },
+  "outputs": {
+    "report_md": "reports/data_audit.md",
+    "schema_json": "reports/data_schema.json",
+    "log_file": "reports/data_audit.log"
+  },
+  "audit": {
+    "chunk_size": 200000,
+    "unique_exact_threshold": 200000,
+    "max_examples": 10,
+    "volume_compare_sample_rows": 12
+  }
+}

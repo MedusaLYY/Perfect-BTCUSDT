@@ -1,0 +1,1256 @@
+{
+  "generated_at_utc": "2026-07-10T02:45:04.895916+00:00",
+  "scope": "stage0_raw_data_audit_only",
+  "config_path": "C:\\ai\\BTCUSDT\\config\\stage0_data_audit.json",
+  "datasets": {
+    "klines": {
+      "role": "klines",
+      "path": "C:\\ai\\BTCUSDT\\data\\raw\\binance\\BTCUSDT_spot_klines_1m.csv",
+      "file_size_bytes": 856801045,
+      "row_count": 4604108,
+      "columns": [
+        "symbol",
+        "interval",
+        "open_time",
+        "open_time_utc",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "close_time",
+        "close_time_utc",
+        "quote_volume",
+        "number_of_trades",
+        "taker_buy_base_volume",
+        "taker_buy_quote_volume"
+      ],
+      "head_rows": [
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1506816000000",
+          "open_time_utc": "2017-10-01T00:00:00+00:00",
+          "open": "4378.49",
+          "high": "4378.49",
+          "low": "4378.49",
+          "close": "4378.49",
+          "volume": "0.891882",
+          "close_time": "1506816059999",
+          "close_time_utc": "2017-10-01T00:00:59.999000+00:00",
+          "quote_volume": "3905.09641818",
+          "number_of_trades": "3",
+          "taker_buy_base_volume": "0.891882",
+          "taker_buy_quote_volume": "3905.09641818"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1506816060000",
+          "open_time_utc": "2017-10-01T00:01:00+00:00",
+          "open": "4346.03",
+          "high": "4346.03",
+          "low": "4346.03",
+          "close": "4346.03",
+          "volume": "0.027995",
+          "close_time": "1506816119999",
+          "close_time_utc": "2017-10-01T00:01:59.999000+00:00",
+          "quote_volume": "121.66710985",
+          "number_of_trades": "3",
+          "taker_buy_base_volume": "0.0",
+          "taker_buy_quote_volume": "0.0"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1506816120000",
+          "open_time_utc": "2017-10-01T00:02:00+00:00",
+          "open": "4346.03",
+          "high": "4346.03",
+          "low": "4346.03",
+          "close": "4346.03",
+          "volume": "0.092927",
+          "close_time": "1506816179999",
+          "close_time_utc": "2017-10-01T00:02:59.999000+00:00",
+          "quote_volume": "403.86352981",
+          "number_of_trades": "2",
+          "taker_buy_base_volume": "0.0",
+          "taker_buy_quote_volume": "0.0"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1506816180000",
+          "open_time_utc": "2017-10-01T00:03:00+00:00",
+          "open": "4346.03",
+          "high": "4362.25",
+          "low": "4346.03",
+          "close": "4346.03",
+          "volume": "1.096058",
+          "close_time": "1506816239999",
+          "close_time_utc": "2017-10-01T00:03:59.999000+00:00",
+          "quote_volume": "4772.85894898",
+          "number_of_trades": "7",
+          "taker_buy_base_volume": "0.0",
+          "taker_buy_quote_volume": "0.0"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1506816240000",
+          "open_time_utc": "2017-10-01T00:04:00+00:00",
+          "open": "4346.03",
+          "high": "4346.03",
+          "low": "4346.03",
+          "close": "4346.03",
+          "volume": "0.0",
+          "close_time": "1506816299999",
+          "close_time_utc": "2017-10-01T00:04:59.999000+00:00",
+          "quote_volume": "0.0",
+          "number_of_trades": "0",
+          "taker_buy_base_volume": "0.0",
+          "taker_buy_quote_volume": "0.0"
+        }
+      ],
+      "tail_rows": [
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1783554960000",
+          "open_time_utc": "2026-07-08T23:56:00+00:00",
+          "open": "62313.99",
+          "high": "62320.0",
+          "low": "62313.99",
+          "close": "62318.24",
+          "volume": "1.36498",
+          "close_time": "1783555019999",
+          "close_time_utc": "2026-07-08T23:56:59.999000+00:00",
+          "quote_volume": "85061.828436",
+          "number_of_trades": "416",
+          "taker_buy_base_volume": "0.8934",
+          "taker_buy_quote_volume": "55675.1293402"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1783555020000",
+          "open_time_utc": "2026-07-08T23:57:00+00:00",
+          "open": "62318.23",
+          "high": "62318.24",
+          "low": "62313.74",
+          "close": "62317.01",
+          "volume": "2.49745",
+          "close_time": "1783555079999",
+          "close_time_utc": "2026-07-08T23:57:59.999000+00:00",
+          "quote_volume": "155635.825547",
+          "number_of_trades": "410",
+          "taker_buy_base_volume": "0.3519",
+          "taker_buy_quote_volume": "21929.2866419"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1783555080000",
+          "open_time_utc": "2026-07-08T23:58:00+00:00",
+          "open": "62317.02",
+          "high": "62317.02",
+          "low": "62296.0",
+          "close": "62296.01",
+          "volume": "5.14615",
+          "close_time": "1783555139999",
+          "close_time_utc": "2026-07-08T23:58:59.999000+00:00",
+          "quote_volume": "320651.7303793",
+          "number_of_trades": "646",
+          "taker_buy_base_volume": "0.6908",
+          "taker_buy_quote_volume": "43043.9485497"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1783555140000",
+          "open_time_utc": "2026-07-08T23:59:00+00:00",
+          "open": "62296.0",
+          "high": "62296.01",
+          "low": "62290.0",
+          "close": "62290.0",
+          "volume": "1.75473",
+          "close_time": "1783555199999",
+          "close_time_utc": "2026-07-08T23:59:59.999000+00:00",
+          "quote_volume": "109307.5895512",
+          "number_of_trades": "521",
+          "taker_buy_base_volume": "0.59043",
+          "taker_buy_quote_volume": "36780.4165819"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "interval": "1m",
+          "open_time": "1783555200000",
+          "open_time_utc": "2026-07-09T00:00:00+00:00",
+          "open": "62290.01",
+          "high": "62309.88",
+          "low": "62284.91",
+          "close": "62284.91",
+          "volume": "23.43213",
+          "close_time": "1783555259999",
+          "close_time_utc": "2026-07-09T00:00:59.999000+00:00",
+          "quote_volume": "1459880.0483099",
+          "number_of_trades": "2879",
+          "taker_buy_base_volume": "2.94106",
+          "taker_buy_quote_volume": "183214.6605675"
+        }
+      ],
+      "fields": [
+        {
+          "original_name": "symbol",
+          "inferred_meaning": "交易对符号",
+          "data_type": "string",
+          "missing_count": 0,
+          "unique_count": 1,
+          "unique_count_is_exact": true,
+          "min": "BTCUSDT",
+          "max": "BTCUSDT"
+        },
+        {
+          "original_name": "interval",
+          "inferred_meaning": "K线周期",
+          "data_type": "string",
+          "missing_count": 0,
+          "unique_count": 1,
+          "unique_count_is_exact": true,
+          "min": "1m",
+          "max": "1m"
+        },
+        {
+          "original_name": "open_time",
+          "inferred_meaning": "K线开盘时间戳",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 4607075,
+          "unique_count_is_exact": false,
+          "min": 1506816000000,
+          "max": 1783555200000
+        },
+        {
+          "original_name": "open_time_utc",
+          "inferred_meaning": "K线开盘时间(UTC字符串)",
+          "data_type": "datetime_string",
+          "missing_count": 0,
+          "unique_count": 4557612,
+          "unique_count_is_exact": false,
+          "min": "2017-10-01T00:00:00+00:00",
+          "max": "2026-07-09T00:00:00+00:00"
+        },
+        {
+          "original_name": "open",
+          "inferred_meaning": "开盘价",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 2785662,
+          "unique_count_is_exact": false,
+          "min": 3157.69,
+          "max": 126114.5
+        },
+        {
+          "original_name": "high",
+          "inferred_meaning": "最高价",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 2596502,
+          "unique_count_is_exact": false,
+          "min": 3162.92,
+          "max": 126199.63
+        },
+        {
+          "original_name": "low",
+          "inferred_meaning": "最低价",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 2572177,
+          "unique_count_is_exact": false,
+          "min": 3156.26,
+          "max": 126071.86
+        },
+        {
+          "original_name": "close",
+          "inferred_meaning": "收盘价",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 2822185,
+          "unique_count_is_exact": false,
+          "min": 3157.67,
+          "max": 126114.5
+        },
+        {
+          "original_name": "volume",
+          "inferred_meaning": "基础资产成交量",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 4033946,
+          "unique_count_is_exact": false,
+          "min": 0.0,
+          "max": 5877.77545
+        },
+        {
+          "original_name": "close_time",
+          "inferred_meaning": "K线收盘时间戳",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 4536977,
+          "unique_count_is_exact": false,
+          "min": 1506816059999,
+          "max": 1783555259999
+        },
+        {
+          "original_name": "close_time_utc",
+          "inferred_meaning": "K线收盘时间(UTC字符串)",
+          "data_type": "datetime_string",
+          "missing_count": 0,
+          "unique_count": 4430993,
+          "unique_count_is_exact": false,
+          "min": "2017-10-01T00:00:59.999000+00:00",
+          "max": "2026-07-09T00:00:59.999000+00:00"
+        },
+        {
+          "original_name": "quote_volume",
+          "inferred_meaning": "计价资产成交额",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 4737562,
+          "unique_count_is_exact": false,
+          "min": 0.0,
+          "max": 259850148.7256762
+        },
+        {
+          "original_name": "number_of_trades",
+          "inferred_meaning": "成交笔数",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 23671,
+          "unique_count_is_exact": true,
+          "min": 0,
+          "max": 213107
+        },
+        {
+          "original_name": "taker_buy_base_volume",
+          "inferred_meaning": "主动买入基础资产成交量",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 3452656,
+          "unique_count_is_exact": false,
+          "min": 0.0,
+          "max": 3537.45296
+        },
+        {
+          "original_name": "taker_buy_quote_volume",
+          "inferred_meaning": "主动买入计价资产成交额",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 4513891,
+          "unique_count_is_exact": false,
+          "min": 0.0,
+          "max": 148231357.3668938
+        }
+      ],
+      "time_fields": [
+        {
+          "field": "open_time",
+          "unit": "milliseconds",
+          "min_utc": "2017-10-01T00:00:00+00:00",
+          "max_utc": "2026-07-09T00:00:00+00:00",
+          "basis": "字段名包含时间含义，单位按数值量级推断"
+        },
+        {
+          "field": "open_time_utc",
+          "unit": "formatted_time",
+          "min_utc": "2017-10-01T00:00:00+00:00",
+          "max_utc": "2026-07-09T00:00:00+00:00",
+          "basis": "字段名包含时间含义且内容可解析为格式化时间"
+        },
+        {
+          "field": "close_time",
+          "unit": "milliseconds",
+          "min_utc": "2017-10-01T00:00:59.999000+00:00",
+          "max_utc": "2026-07-09T00:00:59.999000+00:00",
+          "basis": "字段名包含时间含义，单位按数值量级推断"
+        },
+        {
+          "field": "close_time_utc",
+          "unit": "formatted_time",
+          "min_utc": "2017-10-01T00:00:59.999000+00:00",
+          "max_utc": "2026-07-09T00:00:59.999000+00:00",
+          "basis": "字段名包含时间含义且内容可解析为格式化时间"
+        }
+      ],
+      "field_mapping": {
+        "symbol": {
+          "column": "symbol",
+          "meaning": "交易对符号",
+          "confidence": "high"
+        },
+        "interval": {
+          "column": "interval",
+          "meaning": "K线周期",
+          "confidence": "high"
+        },
+        "open_time": {
+          "column": "open_time",
+          "meaning": "K线开盘时间",
+          "confidence": "high"
+        },
+        "open_time_utc": {
+          "column": "open_time_utc",
+          "meaning": "K线开盘UTC时间",
+          "confidence": "high"
+        },
+        "close_time": {
+          "column": "close_time",
+          "meaning": "K线收盘时间",
+          "confidence": "high"
+        },
+        "open": {
+          "column": "open",
+          "meaning": "开盘价",
+          "confidence": "high"
+        },
+        "high": {
+          "column": "high",
+          "meaning": "最高价",
+          "confidence": "high"
+        },
+        "low": {
+          "column": "low",
+          "meaning": "最低价",
+          "confidence": "high"
+        },
+        "close": {
+          "column": "close",
+          "meaning": "收盘价",
+          "confidence": "high"
+        },
+        "volume": {
+          "column": "volume",
+          "meaning": "基础资产成交量",
+          "confidence": "high"
+        },
+        "quote_volume": {
+          "column": "quote_volume",
+          "meaning": "计价资产成交额",
+          "confidence": "high"
+        },
+        "number_of_trades": {
+          "column": "number_of_trades",
+          "meaning": "成交笔数",
+          "confidence": "high"
+        },
+        "taker_buy_base_volume": {
+          "column": "taker_buy_base_volume",
+          "meaning": "主动买入基础资产成交量",
+          "confidence": "high"
+        }
+      },
+      "checks": {
+        "row_count": 4604108,
+        "primary_time_unit": "milliseconds",
+        "time_range_utc": {
+          "start": "2017-10-01T00:00:00+00:00",
+          "end": "2026-07-09T00:00:00+00:00"
+        },
+        "is_sorted_by_open_time": true,
+        "sorted_violations": 0,
+        "duplicate_open_time_count": 0,
+        "missing_minutes": 8213,
+        "gap_examples": [
+          {
+            "previous_open_time_utc": "2017-12-04T06:00:00+00:00",
+            "next_open_time_utc": "2017-12-04T06:49:00+00:00",
+            "interval_ms": 2940000,
+            "missing_minutes": 48
+          },
+          {
+            "previous_open_time_utc": "2017-12-18T10:00:00+00:00",
+            "next_open_time_utc": "2017-12-18T10:14:00+00:00",
+            "interval_ms": 840000,
+            "missing_minutes": 13
+          },
+          {
+            "previous_open_time_utc": "2017-12-18T12:29:00+00:00",
+            "next_open_time_utc": "2017-12-18T13:34:00+00:00",
+            "interval_ms": 3900000,
+            "missing_minutes": 64
+          },
+          {
+            "previous_open_time_utc": "2018-01-04T03:00:00+00:00",
+            "next_open_time_utc": "2018-01-04T05:06:00+00:00",
+            "interval_ms": 7560000,
+            "missing_minutes": 125
+          },
+          {
+            "previous_open_time_utc": "2018-02-08T00:28:00+00:00",
+            "next_open_time_utc": "2018-02-09T10:00:00+00:00",
+            "interval_ms": 120720000,
+            "missing_minutes": 2011
+          },
+          {
+            "previous_open_time_utc": "2018-02-10T05:59:00+00:00",
+            "next_open_time_utc": "2018-02-10T06:15:00+00:00",
+            "interval_ms": 960000,
+            "missing_minutes": 15
+          },
+          {
+            "previous_open_time_utc": "2018-02-11T04:00:00+00:00",
+            "next_open_time_utc": "2018-02-11T04:35:00+00:00",
+            "interval_ms": 2100000,
+            "missing_minutes": 34
+          },
+          {
+            "previous_open_time_utc": "2018-06-26T01:59:00+00:00",
+            "next_open_time_utc": "2018-06-26T12:00:00+00:00",
+            "interval_ms": 36060000,
+            "missing_minutes": 600
+          },
+          {
+            "previous_open_time_utc": "2018-06-27T12:59:00+00:00",
+            "next_open_time_utc": "2018-06-27T14:45:00+00:00",
+            "interval_ms": 6360000,
+            "missing_minutes": 105
+          },
+          {
+            "previous_open_time_utc": "2018-07-04T00:22:00+00:00",
+            "next_open_time_utc": "2018-07-04T08:00:00+00:00",
+            "interval_ms": 27480000,
+            "missing_minutes": 457
+          }
+        ],
+        "is_interval_stable_1m": false,
+        "non_1m_interval_count": 34,
+        "interval_counts_top": [
+          {
+            "interval_ms": 60000,
+            "count": 4604073
+          },
+          {
+            "interval_ms": 3660000,
+            "count": 3
+          },
+          {
+            "interval_ms": 36060000,
+            "count": 2
+          },
+          {
+            "interval_ms": 12660000,
+            "count": 2
+          },
+          {
+            "interval_ms": 7260000,
+            "count": 2
+          },
+          {
+            "interval_ms": 9060000,
+            "count": 2
+          },
+          {
+            "interval_ms": 2940000,
+            "count": 1
+          },
+          {
+            "interval_ms": 840000,
+            "count": 1
+          },
+          {
+            "interval_ms": 3900000,
+            "count": 1
+          },
+          {
+            "interval_ms": 7560000,
+            "count": 1
+          }
+        ],
+        "time_parse_errors": 0,
+        "nonpositive_price_counts": {
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0
+        },
+        "has_nonpositive_prices": false,
+        "negative_volume_counts": {
+          "volume": 0,
+          "quote_volume": 0,
+          "taker_buy_base_volume": 0
+        },
+        "has_negative_volume": false,
+        "ohlc_violation_count": 0,
+        "has_ohlc_violations": false,
+        "close_time_span_violation_count": 16
+      }
+    },
+    "agg_trades": {
+      "role": "agg_trades",
+      "path": "C:\\ai\\BTCUSDT\\data\\raw\\binance\\BTCUSDT_spot_agg_trades.csv",
+      "file_size_bytes": 1369383096,
+      "row_count": 10912000,
+      "columns": [
+        "symbol",
+        "agg_trade_id",
+        "price",
+        "quantity",
+        "first_trade_id",
+        "last_trade_id",
+        "trade_time",
+        "trade_time_utc",
+        "is_buyer_maker",
+        "is_best_match"
+      ],
+      "head_rows": [
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1489932692",
+          "price": "20132.64000000",
+          "quantity": "0.00152000",
+          "first_trade_id": "1741118880",
+          "last_trade_id": "1741118880",
+          "trade_time": "1662076800000",
+          "trade_time_utc": "2022-09-02T00:00:00+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1489932693",
+          "price": "20132.64000000",
+          "quantity": "0.00165000",
+          "first_trade_id": "1741118881",
+          "last_trade_id": "1741118881",
+          "trade_time": "1662076800002",
+          "trade_time_utc": "2022-09-02T00:00:00.002000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1489932694",
+          "price": "20132.64000000",
+          "quantity": "0.00111000",
+          "first_trade_id": "1741118882",
+          "last_trade_id": "1741118882",
+          "trade_time": "1662076800003",
+          "trade_time_utc": "2022-09-02T00:00:00.003000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1489932695",
+          "price": "20131.46000000",
+          "quantity": "0.00276000",
+          "first_trade_id": "1741118883",
+          "last_trade_id": "1741118883",
+          "trade_time": "1662076800008",
+          "trade_time_utc": "2022-09-02T00:00:00.008000+00:00",
+          "is_buyer_maker": "True",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1489932696",
+          "price": "20132.64000000",
+          "quantity": "0.00280000",
+          "first_trade_id": "1741118884",
+          "last_trade_id": "1741118884",
+          "trade_time": "1662076800008",
+          "trade_time_utc": "2022-09-02T00:00:00.008000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        }
+      ],
+      "tail_rows": [
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1500874235",
+          "price": "19830.75000000",
+          "quantity": "0.05000000",
+          "first_trade_id": "1753687088",
+          "last_trade_id": "1753687088",
+          "trade_time": "1662317165068",
+          "trade_time_utc": "2022-09-04T18:46:05.068000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1500874236",
+          "price": "19830.80000000",
+          "quantity": "0.05000000",
+          "first_trade_id": "1753687089",
+          "last_trade_id": "1753687089",
+          "trade_time": "1662317165068",
+          "trade_time_utc": "2022-09-04T18:46:05.068000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1500874237",
+          "price": "19830.81000000",
+          "quantity": "0.00582000",
+          "first_trade_id": "1753687090",
+          "last_trade_id": "1753687090",
+          "trade_time": "1662317165068",
+          "trade_time_utc": "2022-09-04T18:46:05.068000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1500874238",
+          "price": "19830.83000000",
+          "quantity": "0.05000000",
+          "first_trade_id": "1753687091",
+          "last_trade_id": "1753687091",
+          "trade_time": "1662317165068",
+          "trade_time_utc": "2022-09-04T18:46:05.068000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        },
+        {
+          "symbol": "BTCUSDT",
+          "agg_trade_id": "1500874239",
+          "price": "19830.90000000",
+          "quantity": "0.01100000",
+          "first_trade_id": "1753687092",
+          "last_trade_id": "1753687093",
+          "trade_time": "1662317165068",
+          "trade_time_utc": "2022-09-04T18:46:05.068000+00:00",
+          "is_buyer_maker": "False",
+          "is_best_match": "True"
+        }
+      ],
+      "fields": [
+        {
+          "original_name": "symbol",
+          "inferred_meaning": "交易对符号",
+          "data_type": "string",
+          "missing_count": 0,
+          "unique_count": 1,
+          "unique_count_is_exact": true,
+          "min": "BTCUSDT",
+          "max": "BTCUSDT"
+        },
+        {
+          "original_name": "agg_trade_id",
+          "inferred_meaning": "聚合成交ID",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 11227250,
+          "unique_count_is_exact": false,
+          "min": 1489932692,
+          "max": 1500874239
+        },
+        {
+          "original_name": "price",
+          "inferred_meaning": "成交价格",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 85243,
+          "unique_count_is_exact": true,
+          "min": 19583.1,
+          "max": 20441.26
+        },
+        {
+          "original_name": "quantity",
+          "inferred_meaning": "成交数量",
+          "data_type": "decimal",
+          "missing_count": 0,
+          "unique_count": 116894,
+          "unique_count_is_exact": true,
+          "min": 1e-05,
+          "max": 185.0282
+        },
+        {
+          "original_name": "first_trade_id",
+          "inferred_meaning": "聚合成交包含的首个成交ID",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 10720354,
+          "unique_count_is_exact": false,
+          "min": 1741118880,
+          "max": 1753687092
+        },
+        {
+          "original_name": "last_trade_id",
+          "inferred_meaning": "聚合成交包含的最后成交ID",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 10800754,
+          "unique_count_is_exact": false,
+          "min": 1741118880,
+          "max": 1753687093
+        },
+        {
+          "original_name": "trade_time",
+          "inferred_meaning": "成交时间戳",
+          "data_type": "integer",
+          "missing_count": 0,
+          "unique_count": 5596844,
+          "unique_count_is_exact": false,
+          "min": 1662076800000,
+          "max": 1662317165068
+        },
+        {
+          "original_name": "trade_time_utc",
+          "inferred_meaning": "成交时间(UTC字符串)",
+          "data_type": "datetime_string",
+          "missing_count": 0,
+          "unique_count": 5602322,
+          "unique_count_is_exact": false,
+          "min": "2022-09-02T00:00:00+00:00",
+          "max": "2022-09-04T18:46:05.068000+00:00"
+        },
+        {
+          "original_name": "is_buyer_maker",
+          "inferred_meaning": "买方是否为挂单方",
+          "data_type": "boolean",
+          "missing_count": 0,
+          "unique_count": 2,
+          "unique_count_is_exact": true,
+          "min": "False",
+          "max": "True"
+        },
+        {
+          "original_name": "is_best_match",
+          "inferred_meaning": "是否最佳撮合",
+          "data_type": "boolean",
+          "missing_count": 0,
+          "unique_count": 1,
+          "unique_count_is_exact": true,
+          "min": "True",
+          "max": "True"
+        }
+      ],
+      "time_fields": [
+        {
+          "field": "trade_time",
+          "unit": "milliseconds",
+          "min_utc": "2022-09-02T00:00:00+00:00",
+          "max_utc": "2022-09-04T18:46:05.068000+00:00",
+          "basis": "字段名包含时间含义，单位按数值量级推断"
+        },
+        {
+          "field": "trade_time_utc",
+          "unit": "formatted_time",
+          "min_utc": "2022-09-02T00:00:00+00:00",
+          "max_utc": "2022-09-04T18:46:05.068000+00:00",
+          "basis": "字段名包含时间含义且内容可解析为格式化时间"
+        }
+      ],
+      "field_mapping": {
+        "symbol": {
+          "column": "symbol",
+          "meaning": "交易对符号",
+          "confidence": "high"
+        },
+        "agg_trade_id": {
+          "column": "agg_trade_id",
+          "meaning": "聚合成交ID",
+          "confidence": "high"
+        },
+        "price": {
+          "column": "price",
+          "meaning": "成交价格",
+          "confidence": "high"
+        },
+        "quantity": {
+          "column": "quantity",
+          "meaning": "成交数量",
+          "confidence": "high"
+        },
+        "first_trade_id": {
+          "column": "first_trade_id",
+          "meaning": "首个成交ID",
+          "confidence": "high"
+        },
+        "last_trade_id": {
+          "column": "last_trade_id",
+          "meaning": "最后成交ID",
+          "confidence": "high"
+        },
+        "trade_time": {
+          "column": "trade_time",
+          "meaning": "成交时间",
+          "confidence": "high"
+        },
+        "trade_time_utc": {
+          "column": "trade_time_utc",
+          "meaning": "成交UTC时间",
+          "confidence": "high"
+        },
+        "is_buyer_maker": {
+          "column": "is_buyer_maker",
+          "meaning": "买方是否为挂单方",
+          "confidence": "high"
+        },
+        "is_best_match": {
+          "column": "is_best_match",
+          "meaning": "是否最佳撮合",
+          "confidence": "high"
+        }
+      },
+      "checks": {
+        "row_count": 10912000,
+        "primary_time_unit": "milliseconds",
+        "time_range_utc": {
+          "start": "2022-09-02T00:00:00+00:00",
+          "end": "2022-09-04T18:46:05.068000+00:00"
+        },
+        "is_sorted_by_trade_time": true,
+        "trade_time_sorted_violations": 0,
+        "duplicate_agg_trade_id_count": 0,
+        "is_agg_trade_id_non_decreasing": true,
+        "agg_trade_id_decrease_count": 0,
+        "agg_trade_id_gap_count": 5268,
+        "agg_trade_id_max_gap": 280,
+        "nonpositive_price_count": 0,
+        "nonpositive_quantity_count": 0,
+        "is_buyer_maker_values": {
+          "True": 5432803,
+          "False": 5479197
+        },
+        "is_best_match_values": {
+          "True": 10912000
+        },
+        "aggregated_minute_count": 4007
+      }
+    }
+  },
+  "quality_checks": {
+    "time_overlap": {
+      "status": "completed",
+      "has_overlap": true,
+      "overlap_start_utc": "2022-09-02T00:00:00+00:00",
+      "overlap_end_utc": "2022-09-04T18:46:05.068000+00:00",
+      "overlap_duration_seconds": 240365.068,
+      "overlap_duration_hours": 66.76807444444444
+    },
+    "volume_comparison": {
+      "status": "completed",
+      "assumption": "按币安标准语义，agg_trades.quantity 与 K线 volume 均视为基础资产成交量。",
+      "agg_minute_count": 4007,
+      "matched_minute_count": 4007,
+      "agg_minutes_without_kline": 0,
+      "duplicate_kline_minutes_in_overlap": 0,
+      "signed_diff_distribution": {
+        "min": -145.88807999999995,
+        "p50": -0.0677299999999974,
+        "mean": -0.7854529548290485,
+        "p90": 0.0,
+        "p99": 0.0,
+        "max": 2.842170943040401e-14
+      },
+      "abs_diff_distribution": {
+        "min": 0.0,
+        "p50": 0.0677299999999974,
+        "mean": 0.7854529548290486,
+        "p90": 1.6681359999999985,
+        "p99": 9.817268000000016,
+        "max": 145.88807999999995
+      },
+      "rel_diff_distribution": {
+        "min": 0.0,
+        "p50": 0.0006471705150571749,
+        "mean": 0.00487860615075281,
+        "p90": 0.012483891570390378,
+        "p99": 0.058824936818913875,
+        "max": 0.8629859776621369
+      },
+      "first_samples": [
+        {
+          "minute_utc": "2022-09-02T00:00:00+00:00",
+          "agg_base_volume": 190.51995,
+          "kline_volume": 193.68551,
+          "signed_diff": -3.1655599999999993,
+          "abs_diff": 3.1655599999999993,
+          "rel_diff": 0.01634381425848531
+        },
+        {
+          "minute_utc": "2022-09-02T00:01:00+00:00",
+          "agg_base_volume": 166.37952,
+          "kline_volume": 166.37952,
+          "signed_diff": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "minute_utc": "2022-09-02T00:02:00+00:00",
+          "agg_base_volume": 156.30111,
+          "kline_volume": 157.22385,
+          "signed_diff": -0.9227400000000046,
+          "abs_diff": 0.9227400000000046,
+          "rel_diff": 0.005868956904439146
+        },
+        {
+          "minute_utc": "2022-09-02T00:03:00+00:00",
+          "agg_base_volume": 152.88568,
+          "kline_volume": 152.88568,
+          "signed_diff": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "minute_utc": "2022-09-02T00:04:00+00:00",
+          "agg_base_volume": 93.86812,
+          "kline_volume": 93.86812,
+          "signed_diff": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "minute_utc": "2022-09-02T00:05:00+00:00",
+          "agg_base_volume": 193.99419,
+          "kline_volume": 194.84331,
+          "signed_diff": -0.8491199999999992,
+          "abs_diff": 0.8491199999999992,
+          "rel_diff": 0.004357963329610851
+        },
+        {
+          "minute_utc": "2022-09-02T00:06:00+00:00",
+          "agg_base_volume": 126.62815,
+          "kline_volume": 126.67009,
+          "signed_diff": -0.04193999999999676,
+          "abs_diff": 0.04193999999999676,
+          "rel_diff": 0.00033109631484430743
+        },
+        {
+          "minute_utc": "2022-09-02T00:07:00+00:00",
+          "agg_base_volume": 95.12432,
+          "kline_volume": 95.70682,
+          "signed_diff": -0.582499999999996,
+          "abs_diff": 0.582499999999996,
+          "rel_diff": 0.00608629562658122
+        },
+        {
+          "minute_utc": "2022-09-02T00:08:00+00:00",
+          "agg_base_volume": 98.7616,
+          "kline_volume": 98.7616,
+          "signed_diff": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "minute_utc": "2022-09-02T00:09:00+00:00",
+          "agg_base_volume": 79.48252,
+          "kline_volume": 79.65854,
+          "signed_diff": -0.17602000000000828,
+          "abs_diff": 0.17602000000000828,
+          "rel_diff": 0.0022096814729470095
+        },
+        {
+          "minute_utc": "2022-09-02T00:10:00+00:00",
+          "agg_base_volume": 122.26075,
+          "kline_volume": 122.26669,
+          "signed_diff": -0.005939999999995393,
+          "abs_diff": 0.005939999999995393,
+          "rel_diff": 4.8582324425363876e-05
+        },
+        {
+          "minute_utc": "2022-09-02T00:11:00+00:00",
+          "agg_base_volume": 120.67217,
+          "kline_volume": 120.67217,
+          "signed_diff": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        }
+      ],
+      "largest_abs_diff_samples": [
+        {
+          "minute_utc": "2022-09-04T17:00:00+00:00",
+          "agg_base_volume": 435.32965,
+          "kline_volume": 581.21773,
+          "signed_diff": -145.88807999999995,
+          "abs_diff": 145.88807999999995,
+          "rel_diff": 0.25100418048155543
+        },
+        {
+          "minute_utc": "2022-09-02T19:39:00+00:00",
+          "agg_base_volume": 421.5899,
+          "kline_volume": 536.51292,
+          "signed_diff": -114.92302000000001,
+          "abs_diff": 114.92302000000001,
+          "rel_diff": 0.21420363930844388
+        },
+        {
+          "minute_utc": "2022-09-02T17:21:00+00:00",
+          "agg_base_volume": 872.24805,
+          "kline_volume": 957.84018,
+          "signed_diff": -85.59213,
+          "abs_diff": 85.59213,
+          "rel_diff": 0.08935951089460456
+        },
+        {
+          "minute_utc": "2022-09-04T18:46:00+00:00",
+          "agg_base_volume": 11.79795,
+          "kline_volume": 86.10761,
+          "signed_diff": -74.30966,
+          "abs_diff": 74.30966,
+          "rel_diff": 0.8629859776621369
+        },
+        {
+          "minute_utc": "2022-09-02T16:00:00+00:00",
+          "agg_base_volume": 310.21168,
+          "kline_volume": 358.31328,
+          "signed_diff": -48.10160000000002,
+          "abs_diff": 48.10160000000002,
+          "rel_diff": 0.13424453595468194
+        },
+        {
+          "minute_utc": "2022-09-02T20:36:00+00:00",
+          "agg_base_volume": 109.3313,
+          "kline_volume": 147.85049,
+          "signed_diff": -38.51919000000001,
+          "abs_diff": 38.51919000000001,
+          "rel_diff": 0.26052798337022764
+        },
+        {
+          "minute_utc": "2022-09-02T17:23:00+00:00",
+          "agg_base_volume": 1092.89428,
+          "kline_volume": 1125.02556,
+          "signed_diff": -32.13128000000006,
+          "abs_diff": 32.13128000000006,
+          "rel_diff": 0.0285604888834704
+        },
+        {
+          "minute_utc": "2022-09-02T03:03:00+00:00",
+          "agg_base_volume": 840.0884,
+          "kline_volume": 868.69158,
+          "signed_diff": -28.603180000000066,
+          "abs_diff": 28.603180000000066,
+          "rel_diff": 0.03292673793384766
+        },
+        {
+          "minute_utc": "2022-09-04T16:53:00+00:00",
+          "agg_base_volume": 273.35529,
+          "kline_volume": 298.73168,
+          "signed_diff": -25.376389999999958,
+          "abs_diff": 25.376389999999958,
+          "rel_diff": 0.08494710035440486
+        },
+        {
+          "minute_utc": "2022-09-02T18:24:00+00:00",
+          "agg_base_volume": 523.81356,
+          "kline_volume": 546.93784,
+          "signed_diff": -23.12428,
+          "abs_diff": 23.12428,
+          "rel_diff": 0.04227953948112275
+        },
+        {
+          "minute_utc": "2022-09-02T13:17:00+00:00",
+          "agg_base_volume": 308.60878,
+          "kline_volume": 331.2855,
+          "signed_diff": -22.67671999999999,
+          "abs_diff": 22.67671999999999,
+          "rel_diff": 0.06845068679432087
+        },
+        {
+          "minute_utc": "2022-09-04T11:59:00+00:00",
+          "agg_base_volume": 506.2266,
+          "kline_volume": 528.60351,
+          "signed_diff": -22.37691000000001,
+          "abs_diff": 22.37691000000001,
+          "rel_diff": 0.04233212526341342
+        }
+      ]
+    }
+  },
+  "project": {
+    "top_level": [
+      {
+        "path": ".pytest_cache",
+        "type": "dir",
+        "size_bytes": null
+      },
+      {
+        "path": "AGENT.md",
+        "type": "file",
+        "size_bytes": 6786
+      },
+      {
+        "path": "config",
+        "type": "dir",
+        "size_bytes": null
+      },
+      {
+        "path": "data",
+        "type": "dir",
+        "size_bytes": null
+      },
+      {
+        "path": "reports",
+        "type": "dir",
+        "size_bytes": null
+      },
+      {
+        "path": "scripts",
+        "type": "dir",
+        "size_bytes": null
+      },
+      {
+        "path": "tests",
+        "type": "dir",
+        "size_bytes": null
+      }
+    ],
+    "dependency_files": [],
+    "python_imports": {
+      "data\\jiaoben.py": [
+        "argparse",
+        "csv",
+        "datetime",
+        "dateutil",
+        "os",
+        "pandas",
+        "pathlib",
+        "requests",
+        "time",
+        "tqdm",
+        "typing"
+      ],
+      "scripts\\audit_raw_data.py": [
+        "__future__",
+        "argparse",
+        "ast",
+        "collections",
+        "csv",
+        "dataclasses",
+        "datetime",
+        "json",
+        "logging",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "re",
+        "typing"
+      ],
+      "tests\\test_stage0_data_audit.py": [
+        "__future__",
+        "json",
+        "pathlib",
+        "pytest",
+        "scripts",
+        "sys"
+      ]
+    },
+    "dependency_assessment": "未发现requirements.txt/pyproject.toml等依赖清单；当前只能从现有.py文件推断依赖。"
+  },
+  "assumptions": [
+    "klines 用户给出的直接路径不存在，实际使用候选路径 `C:\\ai\\BTCUSDT\\data\\raw\\binance\\BTCUSDT_spot_klines_1m.csv`；尝试路径包括: ['C:\\\\ai\\\\BTCUSDT\\\\data\\\\raw\\\\BTCUSDT_spot_klines_1m.csv', 'C:\\\\ai\\\\BTCUSDT\\\\data\\\\raw\\\\binance\\\\BTCUSDT_spot_klines_1m.csv']",
+    "agg_trades 用户给出的直接路径不存在，实际使用候选路径 `C:\\ai\\BTCUSDT\\data\\raw\\binance\\BTCUSDT_spot_agg_trades.csv`；尝试路径包括: ['C:\\\\ai\\\\BTCUSDT\\\\data\\\\raw\\\\BTCUSDT_spot_agg_trades.csv', 'C:\\\\ai\\\\BTCUSDT\\\\data\\\\raw\\\\binance\\\\BTCUSDT_spot_agg_trades.csv']",
+    "唯一值统计对高基数字段使用HyperLogLog近似，报告中以 `~` 标注。",
+    "agg trades 的 `quantity` 按币安标准语义假设为基础资产成交量，用于和K线 `volume` 做分钟级审计对比。",
+    "`is_buyer_maker` 按币安标准语义解释：False表示买方主动成交，True表示卖方主动成交；本阶段仅记录取值，不生成特征。"
+  ],
+  "outputs": {
+    "report_md": "C:\\ai\\BTCUSDT\\reports\\data_audit.md",
+    "schema_json": "C:\\ai\\BTCUSDT\\reports\\data_schema.json",
+    "log_file": "C:\\ai\\BTCUSDT\\reports\\data_audit.log"
+  }
+}

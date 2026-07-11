@@ -1,0 +1,57 @@
+{
+  "feature_input_path": "data/model/BTCUSDT_kline_features_5m_v1.parquet",
+  "label_input_path": "data/model/BTCUSDT_60m_kline_proxy_labels.parquet",
+  "feature_manifest_path": "reports/stage4_feature_manifest.json",
+  "label_field_dictionary_path": "reports/stage3b_label_field_dictionary.json",
+  "output_dataset_path": "data/model/BTCUSDT_60m_direction_dataset_v1.parquet",
+  "output_split_path": "data/splits/BTCUSDT_60m_split_assignments_v1.parquet",
+  "report_paths": {
+    "main_report": "reports/stage5_dataset_build_report.md",
+    "dataset_manifest": "reports/stage5_dataset_manifest.json",
+    "cv_fold_manifest": "reports/stage5_cv_fold_manifest.json",
+    "split_summary": "reports/stage5_split_summary.csv",
+    "split_distribution_by_year": "reports/stage5_split_distribution_by_year.csv",
+    "split_distribution_by_month": "reports/stage5_split_distribution_by_month.csv",
+    "excluded_samples": "reports/stage5_excluded_samples.csv",
+    "join_audit": "reports/stage5_join_audit.csv"
+  },
+  "log_path": "reports/stage5_dataset_build.log",
+  "dataset_version": "btcusdt_60m_direction_v1",
+  "split_version": "expanding_yearly_v1",
+  "join_key": "decision_time",
+  "final_test_start": "2025-01-01T00:00:00Z",
+  "cv_folds": [
+    {
+      "name": "fold_2020",
+      "validation_start": "2020-01-01T00:00:00Z",
+      "validation_end": "2021-01-01T00:00:00Z"
+    },
+    {
+      "name": "fold_2021",
+      "validation_start": "2021-01-01T00:00:00Z",
+      "validation_end": "2022-01-01T00:00:00Z"
+    },
+    {
+      "name": "fold_2022",
+      "validation_start": "2022-01-01T00:00:00Z",
+      "validation_end": "2023-01-01T00:00:00Z"
+    },
+    {
+      "name": "fold_2023",
+      "validation_start": "2023-01-01T00:00:00Z",
+      "validation_end": "2024-01-01T00:00:00Z"
+    },
+    {
+      "name": "fold_2024",
+      "validation_start": "2024-01-01T00:00:00Z",
+      "validation_end": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "horizon_minutes": 60,
+  "prediction_interval_minutes": 5,
+  "primary_nonoverlap_offset_minutes": 0,
+  "required_feature_count": 63,
+  "parquet_compression": "zstd",
+  "hash_algorithm": "sha256",
+  "symbol": "BTCUSDT"
+}

@@ -1,0 +1,12 @@
+{
+  "model_name": "prior_baseline_final",
+  "p_up": 0.5096038470707707,
+  "predicted_class": 1,
+  "threshold": 0.5,
+  "training_sample_count": 759227,
+  "training_role": "DEVELOPMENT",
+  "label_distribution": {
+    "0": 372322,
+    "1": 386905
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "input_path": "data/interim/BTCUSDT_kline_model_base_1m.parquet",
+  "output_path": "data/model/BTCUSDT_60m_kline_proxy_labels.parquet",
+  "report_paths": {
+    "main_report": "reports/stage3b_full_label_report.md",
+    "distribution_by_year": "reports/stage3b_label_distribution_by_year.csv",
+    "distribution_by_month": "reports/stage3b_label_distribution_by_month.csv",
+    "distribution_by_segment": "reports/stage3b_label_distribution_by_segment.csv",
+    "distribution_by_margin": "reports/stage3b_label_distribution_by_margin.csv",
+    "invalid_label_candidates": "reports/stage3b_invalid_label_candidates.csv",
+    "extreme_return_samples": "reports/stage3b_extreme_return_samples.csv",
+    "field_dictionary": "reports/stage3b_label_field_dictionary.json"
+  },
+  "log_path": "reports/stage3b_label_generation.log",
+  "expected_interval_ms": 60000,
+  "prediction_interval_minutes": 5,
+  "horizon_minutes": 60,
+  "return_margin_bins_bps": [0, 1, 2.5, 5, 10, 25, 50],
+  "proxy_boundary_thresholds_bps": [1, 2.5, 5, 10],
+  "sample_weight_settings": {
+    "margin_full_weight_bps": 10,
+    "minimum_margin_weight": 0.25
+  },
+  "stability_diagnostic_settings": {
+    "small_month_count_ratio_of_median": 0.5,
+    "near_zero_high_std_multiplier": 2.0
+  },
+  "floating_absolute_tolerance": 1e-10,
+  "floating_relative_tolerance": 1e-9,
+  "parquet_compression": "zstd",
+  "extreme_return_rows": 20
+}

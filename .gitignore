@@ -1,0 +1,46 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local logs
+*.log
+
+# Large local datasets and generated intermediates
+data/raw/
+data/processed/
+data/interim/
+data/model/
+data/splits/
+data/predictions/*.parquet
+
+# Keep lightweight documentation under data if added later
+!data/README.md
+
+# Generated stage model folders are large/noisy; keep final deployable model only
+models/stage6_baselines/
+models/stage7_xgboost_fixed/
+models/stage8_xgboost_tuning/
+models/final/*
+!models/final/btcusdt_xgboost_direction_v1.json
+!models/final/btcusdt_probability_calibrator_v1.json
+!models/final/btcusdt_prior_baseline_v1.json
+!models/final/btcusdt_momentum_60m_baseline_v1.json
+!models/final/btcusdt_logistic_baseline_v1.joblib
+!models/final/inference_manifest.json
+
+# Large generated reports; keep source code/config/tests and curated final reports
+reports/*.parquet
+reports/stage8_model_manifest.json
+reports/stage7_model_manifest.json
+reports/stage5_join_audit.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,44 @@
+{
+  "model_base_input_path": "data/interim/BTCUSDT_kline_model_base_1m.parquet",
+  "agg_1m_input_path": "data/interim/BTCUSDT_agg_trades_1m_base.parquet",
+  "overlap_input_path": "data/interim/BTCUSDT_agg_kline_overlap_1m.parquet",
+  "output_path": "data/interim/BTCUSDT_stage3a_label_proxy_comparison.parquet",
+  "report_paths": {
+    "main_report": "reports/stage3a_label_proxy_validation_report.md",
+    "agreement_by_margin": "reports/stage3a_label_agreement_by_margin.csv",
+    "agreement_by_hour": "reports/stage3a_label_agreement_by_hour.csv",
+    "agreement_by_date": "reports/stage3a_label_agreement_by_date.csv",
+    "label_flip_samples": "reports/stage3a_label_flip_samples.csv",
+    "largest_return_differences": "reports/stage3a_largest_return_differences.csv",
+    "field_dictionary": "reports/stage3a_field_dictionary.json"
+  },
+  "log_path": "reports/stage3a_label_proxy_validation.log",
+  "prediction_interval_minutes": 5,
+  "horizon_minutes": 60,
+  "vwap_windows_seconds": [1, 2, 5, 10],
+  "primary_vwap_window_seconds": 5,
+  "return_margin_bins_bps": [0, 1, 2.5, 5, 10, 25, 50],
+  "reliability_requirements": {
+    "require_entry_reliable_overlap": true,
+    "require_settlement_reliable_overlap": true,
+    "exclude_entry_boundary_partial_minute": true,
+    "exclude_settlement_boundary_partial_minute": true,
+    "require_entry_primary_vwap": true,
+    "require_settlement_primary_vwap": true,
+    "require_kline_open_prices": true,
+    "require_exact_horizon_minutes": true
+  },
+  "acceptance_thresholds": {
+    "minimum_primary_reliable_samples": 500,
+    "minimum_overall_label_agreement": 0.97,
+    "minimum_non_boundary_agreement": 0.97,
+    "minimum_agreement_when_abs_return_ge_5bps": 0.99,
+    "maximum_missing_rate_for_5s_vwap": 0.01,
+    "maximum_absolute_mean_return_bias_bps": 0.5
+  },
+  "epsilon": 1e-12,
+  "floating_absolute_tolerance": 1e-10,
+  "floating_relative_tolerance": 1e-9,
+  "parquet_compression": "zstd",
+  "largest_difference_rows": 100
+}

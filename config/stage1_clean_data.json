@@ -1,0 +1,27 @@
+{
+  "random_seed": 42,
+  "timezone": "UTC",
+  "schema_path": "reports/data_schema.json",
+  "inputs": {
+    "klines": "data/raw/binance/BTCUSDT_spot_klines_1m.csv",
+    "agg_trades": "data/raw/binance/BTCUSDT_spot_agg_trades.csv"
+  },
+  "outputs": {
+    "clean_klines_parquet": "data/processed/BTCUSDT_spot_klines_1m_clean.parquet",
+    "clean_agg_trades_parquet": "data/processed/BTCUSDT_spot_agg_trades_clean.parquet",
+    "kline_report": "reports/stage1_kline_cleaning_report.md",
+    "agg_trades_report": "reports/stage1_agg_trades_cleaning_report.md",
+    "kline_gaps_csv": "reports/stage1_kline_gaps.csv",
+    "agg_trade_id_gaps_csv": "reports/stage1_agg_trade_id_gaps.csv",
+    "log_file": "reports/stage1_cleaning.log"
+  },
+  "cleaning": {
+    "expected_kline_interval_ms": 60000,
+    "expected_kline_duration_ms": 59999,
+    "dedup_strategy": "keep_last_original_order",
+    "repair_close_time": true,
+    "chunk_size": 200000,
+    "agg_long_no_trade_threshold_ms": 60000,
+    "invalid_bool_policy": "delete_and_record"
+  }
+}

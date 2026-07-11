@@ -1,0 +1,32 @@
+{
+  "method": "UNCALIBRATED",
+  "params": {},
+  "metadata": {
+    "method": "UNCALIBRATED",
+    "params": {},
+    "training_source": "stage7_development_oof_only",
+    "training_oof_sample_count": 524748,
+    "training_folds": [
+      "fold_2020",
+      "fold_2021",
+      "fold_2022",
+      "fold_2023",
+      "fold_2024"
+    ],
+    "oof_time_range": {
+      "min_decision_time": 1577836800000,
+      "max_decision_time": 1735685700000,
+      "min_decision_time_utc": "2020-01-01T00:00:00+00:00",
+      "max_decision_time_utc": "2024-12-31T22:55:00+00:00"
+    },
+    "input_probability_range": [
+      0.35180744528770447,
+      0.7912328839302063
+    ],
+    "output_probability_range": [
+      0.35180744528770447,
+      0.7912328839302063
+    ],
+    "training_data_hash": "3fd861082280e9cc095ba7ed1d3c6c0abb4a9a1d5783e7d3e896a6709eb65dd6"
+  }
+}

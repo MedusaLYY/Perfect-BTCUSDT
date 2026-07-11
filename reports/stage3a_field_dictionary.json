@@ -1,0 +1,29 @@
+{
+  "fields": {
+    "entry_price_difference_bps_kline_vs_5s": "(entry_price_kline_open / entry_price_vwap_5s - 1) * 10000",
+    "settlement_price_difference_bps_kline_vs_5s": "(settlement_price_kline_open / settlement_price_vwap_5s - 1) * 10000",
+    "return_difference_bps_kline_vs_5s": "(return_kline_open - return_vwap_5s) * 10000",
+    "label_kline_open": "1 if settlement_price_kline_open > entry_price_kline_open else 0",
+    "label_vwap_5s": "1 if settlement_price_vwap_5s > entry_price_vwap_5s else 0; missing if either side missing",
+    "is_primary_reliable_sample": "Configured reliability rule requiring reliable entry/settlement overlap minutes, non-boundary minutes, valid primary VWAP, valid kline open, and exact 60-minute horizon.",
+    "entry_price_vwap_1s": "entry minute vwap_first_1s from Stage 2B left-closed/right-open window",
+    "settlement_price_vwap_1s": "settlement minute vwap_first_1s from Stage 2B left-closed/right-open window",
+    "return_vwap_1s": "settlement_price_vwap_1s / entry_price_vwap_1s - 1",
+    "label_vwap_1s": "1 if settlement_price_vwap_1s > entry_price_vwap_1s else 0; missing if either side missing",
+    "entry_price_vwap_2s": "entry minute vwap_first_2s from Stage 2B left-closed/right-open window",
+    "settlement_price_vwap_2s": "settlement minute vwap_first_2s from Stage 2B left-closed/right-open window",
+    "return_vwap_2s": "settlement_price_vwap_2s / entry_price_vwap_2s - 1",
+    "label_vwap_2s": "1 if settlement_price_vwap_2s > entry_price_vwap_2s else 0; missing if either side missing",
+    "entry_price_vwap_5s": "entry minute vwap_first_5s from Stage 2B left-closed/right-open window",
+    "settlement_price_vwap_5s": "settlement minute vwap_first_5s from Stage 2B left-closed/right-open window",
+    "return_vwap_5s": "settlement_price_vwap_5s / entry_price_vwap_5s - 1",
+    "entry_price_vwap_10s": "entry minute vwap_first_10s from Stage 2B left-closed/right-open window",
+    "settlement_price_vwap_10s": "settlement minute vwap_first_10s from Stage 2B left-closed/right-open window",
+    "return_vwap_10s": "settlement_price_vwap_10s / entry_price_vwap_10s - 1",
+    "label_vwap_10s": "1 if settlement_price_vwap_10s > entry_price_vwap_10s else 0; missing if either side missing"
+  },
+  "notes": [
+    "All joins use integer millisecond timestamps.",
+    "No model features, train/test split, or model outputs are created in Stage 3A."
+  ]
+}

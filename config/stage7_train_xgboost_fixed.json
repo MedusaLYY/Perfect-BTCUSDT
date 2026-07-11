@@ -1,0 +1,100 @@
+{
+  "dataset_path": "data/model/BTCUSDT_60m_direction_dataset_v1.parquet",
+  "split_path": "data/splits/BTCUSDT_60m_split_assignments_v1.parquet",
+  "dataset_manifest_path": "reports/stage5_dataset_manifest.json",
+  "fold_manifest_path": "reports/stage5_cv_fold_manifest.json",
+  "feature_manifest_path": "reports/stage4_feature_manifest.json",
+  "stage6_prediction_path": "data/predictions/BTCUSDT_stage6_cv_baseline_predictions.parquet",
+  "stage6_model_manifest_path": "reports/stage6_model_manifest.json",
+  "prediction_output_path": "data/predictions/BTCUSDT_stage7_cv_xgboost_fixed_predictions.parquet",
+  "model_output_dir": "models/stage7_xgboost_fixed",
+  "report_paths": {
+    "main_report": "reports/stage7_xgboost_fixed_report.md",
+    "metrics_by_fold": "reports/stage7_metrics_by_fold.csv",
+    "metrics_by_subset": "reports/stage7_metrics_by_subset.csv",
+    "metrics_by_offset": "reports/stage7_metrics_by_offset.csv",
+    "oof_summary": "reports/stage7_oof_summary.csv",
+    "model_comparison": "reports/stage7_model_comparison.csv",
+    "calibration_equal_width": "reports/stage7_calibration_equal_width.csv",
+    "calibration_equal_frequency": "reports/stage7_calibration_equal_frequency.csv",
+    "learning_curves": "reports/stage7_learning_curves.csv",
+    "feature_importance_by_fold": "reports/stage7_feature_importance_by_fold.csv",
+    "feature_importance_stability": "reports/stage7_feature_importance_stability.csv",
+    "inner_split_audit": "reports/stage7_inner_split_audit.csv",
+    "model_manifest": "reports/stage7_model_manifest.json"
+  },
+  "log_path": "reports/stage7_training.log",
+  "fold_names": [
+    "fold_2020",
+    "fold_2021",
+    "fold_2022",
+    "fold_2023",
+    "fold_2024"
+  ],
+  "feature_count": 63,
+  "model_name": "xgboost_fixed_v1",
+  "xgboost_parameters": {
+    "objective": "binary:logistic",
+    "booster": "gbtree",
+    "tree_method": "hist",
+    "device": "cpu",
+    "n_estimators": 3000,
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "min_child_weight": 20,
+    "gamma": 0.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.1,
+    "reg_lambda": 10.0,
+    "max_bin": 256,
+    "scale_pos_weight": 1.0,
+    "eval_metric": "logloss",
+    "early_stopping_rounds": 100,
+    "random_state": 42,
+    "verbosity": 1,
+    "validate_parameters": true
+  },
+  "early_stopping_window_days": 90,
+  "inner_purge_horizon_minutes": 60,
+  "minimum_inner_early_stop_samples": 10000,
+  "fixed_prediction_threshold": 0.5,
+  "evaluation_subsets": {
+    "dense": "DENSE",
+    "nonoverlap": "NONOVERLAP_OFFSET_00",
+    "offsets": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55
+    ],
+    "margin_subsets": [
+      "ALL_MARGINS",
+      "ABS_RETURN_GE_1BPS",
+      "ABS_RETURN_GE_2_5BPS",
+      "ABS_RETURN_GE_5BPS",
+      "ABS_RETURN_GE_10BPS"
+    ]
+  },
+  "calibration_bins": 10,
+  "development_gate_thresholds": {
+    "minimum_auc_gain_for_tuning": 0.002,
+    "maximum_allowed_logloss_degradation": 0.001,
+    "minimum_fold_wins": 3
+  },
+  "random_seed": 42,
+  "n_jobs": 19,
+  "parquet_compression": "zstd",
+  "hash_algorithm": "sha256",
+  "numeric_tolerances": {
+    "prediction_atol": 1e-12
+  }
+}

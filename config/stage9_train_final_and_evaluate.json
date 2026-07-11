@@ -1,0 +1,180 @@
+{
+  "dataset_path": "data/model/BTCUSDT_60m_direction_dataset_v1.parquet",
+  "split_path": "data/splits/BTCUSDT_60m_split_assignments_v1.parquet",
+  "dataset_manifest_path": "reports/stage5_dataset_manifest.json",
+  "feature_manifest_path": "reports/stage4_feature_manifest.json",
+  "fold_manifest_path": "reports/stage5_cv_fold_manifest.json",
+  "stage7_oof_prediction_path": "data/predictions/BTCUSDT_stage7_cv_xgboost_fixed_predictions.parquet",
+  "stage6_oof_prediction_path": "data/predictions/BTCUSDT_stage6_cv_baseline_predictions.parquet",
+  "stage7_model_manifest_path": "reports/stage7_model_manifest.json",
+  "stage8_selection_audit_path": "reports/stage8_selection_audit.json",
+  "output_model_dir": "models/final",
+  "final_prediction_path": "data/predictions/BTCUSDT_stage9_final_test_predictions.parquet",
+  "report_paths": {
+    "calibration_selection_report": "reports/stage9_calibration_selection_report.md",
+    "calibration_metrics": "reports/stage9_calibration_metrics.csv",
+    "calibration_forward_predictions": "reports/stage9_calibration_forward_predictions.parquet",
+    "final_training_report": "reports/stage9_final_training_report.md",
+    "final_test_report": "reports/stage9_final_test_report.md",
+    "final_test_metrics": "reports/stage9_final_test_metrics.csv",
+    "final_test_metrics_by_offset": "reports/stage9_final_test_metrics_by_offset.csv",
+    "final_test_metrics_by_margin": "reports/stage9_final_test_metrics_by_margin.csv",
+    "final_protocol_lock": "reports/stage9_final_protocol_lock.json",
+    "final_model_manifest": "reports/stage9_final_model_manifest.json"
+  },
+  "log_path": "reports/stage9_final_training.log",
+  "selected_development_config": "xgb_fixed_v1_reference",
+  "xgboost_parameters": {
+    "objective": "binary:logistic",
+    "booster": "gbtree",
+    "tree_method": "hist",
+    "device": "cpu",
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "min_child_weight": 20,
+    "gamma": 0.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.1,
+    "reg_lambda": 10.0,
+    "max_bin": 256,
+    "scale_pos_weight": 1.0,
+    "eval_metric": "logloss",
+    "random_state": 42,
+    "validate_parameters": true,
+    "verbosity": 1
+  },
+  "logistic_regression_parameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "fit_intercept": true,
+    "class_weight": null,
+    "max_iter": 2000,
+    "tol": 0.000001,
+    "random_state": 42,
+    "n_jobs": null
+  },
+  "scaler_parameters": {
+    "with_mean": true,
+    "with_std": true
+  },
+  "calibration_candidates": [
+    "UNCALIBRATED",
+    "PLATT",
+    "ISOTONIC"
+  ],
+  "calibration_forward_folds": [
+    {
+      "calibration_fold": "calibration_2021",
+      "fit_folds": [
+        "fold_2020"
+      ],
+      "evaluation_fold": "fold_2021"
+    },
+    {
+      "calibration_fold": "calibration_2022",
+      "fit_folds": [
+        "fold_2020",
+        "fold_2021"
+      ],
+      "evaluation_fold": "fold_2022"
+    },
+    {
+      "calibration_fold": "calibration_2023",
+      "fit_folds": [
+        "fold_2020",
+        "fold_2021",
+        "fold_2022"
+      ],
+      "evaluation_fold": "fold_2023"
+    },
+    {
+      "calibration_fold": "calibration_2024",
+      "fit_folds": [
+        "fold_2020",
+        "fold_2021",
+        "fold_2022",
+        "fold_2023"
+      ],
+      "evaluation_fold": "fold_2024"
+    }
+  ],
+  "calibration_selection_rules": {
+    "calibration_logloss_tie_tolerance": 0.0002,
+    "material_logloss_improvement": 0.0002,
+    "material_brier_improvement": 0.0001,
+    "material_logloss_max_degradation": 0.0001,
+    "complexity_order": [
+      "UNCALIBRATED",
+      "PLATT",
+      "ISOTONIC"
+    ]
+  },
+  "calibration_epsilon": 0.000001,
+  "final_test_start": "2025-01-01T00:00:00Z",
+  "final_early_stopping_window_days": 90,
+  "final_early_stopping_rounds": 100,
+  "final_max_estimators": 3000,
+  "fixed_classification_threshold": 0.5,
+  "evaluation_subsets": {
+    "dense": "DENSE",
+    "nonoverlap": "NONOVERLAP_OFFSET_00",
+    "offsets": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55
+    ],
+    "margin_subsets": [
+      "ALL_MARGINS",
+      "ABS_RETURN_GE_1BPS",
+      "ABS_RETURN_GE_2_5BPS",
+      "ABS_RETURN_GE_5BPS",
+      "ABS_RETURN_GE_10BPS"
+    ]
+  },
+  "evaluation_metrics": [
+    "sample_count",
+    "accuracy",
+    "balanced_accuracy",
+    "roc_auc",
+    "average_precision",
+    "pr_auc_lift_vs_positive_ratio",
+    "mcc",
+    "precision",
+    "recall",
+    "f1",
+    "specificity",
+    "negative_predictive_value",
+    "log_loss",
+    "brier_score",
+    "tn",
+    "fp",
+    "fn",
+    "tp",
+    "mean_predicted_probability",
+    "predicted_positive_ratio",
+    "ece_equal_width",
+    "ece_equal_frequency",
+    "mce_equal_width",
+    "mce_equal_frequency"
+  ],
+  "calibration_bins": 10,
+  "momentum_baseline_alpha": 1.0,
+  "random_seed": 42,
+  "n_jobs": 19,
+  "parquet_compression": "zstd",
+  "hash_algorithm": "sha256",
+  "numeric_tolerances": {
+    "prediction_atol": 1e-12
+  }
+}

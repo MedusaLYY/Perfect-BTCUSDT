@@ -1,0 +1,163 @@
+{
+  "dataset_version": "btcusdt_60m_direction_v1",
+  "feature_set_version": "kline_v1_63",
+  "stage4_feature_definition_hash": "4135a862351330fffd67ef945168efd65a2aef1310759eaa2a8d7dfefe1c793d",
+  "ordered_feature_list_hash": "c2c2c84b40520359b3d437601a72ec6a4a26f26522794c7b4d9c900bd16a4491",
+  "label_definition_version": "stage3b_kline_proxy_label_v1",
+  "split_definition_version": "expanding_yearly_v1",
+  "identifier_columns": [
+    "dataset_row_id",
+    "symbol",
+    "feature_set_version",
+    "dataset_version",
+    "continuity_segment_id"
+  ],
+  "time_columns": [
+    "feature_open_time",
+    "decision_time",
+    "entry_minute_open_time",
+    "settlement_minute_open_time"
+  ],
+  "feature_columns": [
+    "log_return_1m",
+    "log_return_3m",
+    "log_return_5m",
+    "log_return_10m",
+    "log_return_15m",
+    "log_return_30m",
+    "log_return_60m",
+    "log_return_120m",
+    "momentum_acceleration_5_30",
+    "momentum_acceleration_15_60",
+    "efficiency_ratio_15m",
+    "efficiency_ratio_60m",
+    "up_candle_ratio_15m",
+    "realized_volatility_5m",
+    "realized_volatility_15m",
+    "realized_volatility_30m",
+    "realized_volatility_60m",
+    "realized_volatility_120m",
+    "volatility_ratio_5_60",
+    "volatility_ratio_15_120",
+    "normalized_atr_14",
+    "normalized_atr_60",
+    "semivariance_imbalance_60m",
+    "ema_distance_5",
+    "ema_distance_20",
+    "ema_distance_60",
+    "ema_distance_120",
+    "ema_spread_5_20",
+    "ema_spread_20_60",
+    "normalized_slope_15m",
+    "normalized_slope_60m",
+    "range_position_30m",
+    "range_position_60m",
+    "range_position_120m",
+    "support_distance_60m",
+    "resistance_distance_60m",
+    "vwap_distance_60m",
+    "signed_body_ratio",
+    "absolute_body_ratio",
+    "upper_wick_ratio",
+    "lower_wick_ratio",
+    "close_location",
+    "signed_body_mean_5m",
+    "upper_wick_mean_15m",
+    "lower_wick_mean_15m",
+    "is_zero_volume_1m",
+    "log_quote_volume_zscore_60m",
+    "volume_ratio_5_60",
+    "volume_ratio_15_60",
+    "taker_buy_quote_ratio_1m",
+    "taker_buy_quote_ratio_5m",
+    "taker_buy_quote_ratio_15m",
+    "taker_buy_quote_ratio_60m",
+    "buy_pressure_change_5_60",
+    "buy_pressure_persistence_15m",
+    "buy_pressure_std_15m",
+    "log_trade_count_zscore_60m",
+    "log_avg_trade_quote_size_zscore_60m",
+    "time_sin",
+    "time_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "is_weekend"
+  ],
+  "primary_target_columns": [
+    "label_up_60m"
+  ],
+  "auxiliary_target_columns": [
+    "future_simple_return_60m",
+    "future_log_return_60m",
+    "absolute_future_return_bps"
+  ],
+  "sample_weight_columns": [
+    "sample_weight_uniform",
+    "sample_weight_margin"
+  ],
+  "evaluation_metadata_columns": [
+    "proxy_margin_bucket",
+    "proxy_boundary_risk_1bps",
+    "proxy_boundary_risk_2_5bps",
+    "proxy_boundary_risk_5bps",
+    "proxy_boundary_risk_10bps"
+  ],
+  "forbidden_model_input_columns": [
+    "label_up_60m",
+    "future_simple_return_60m",
+    "future_log_return_60m",
+    "absolute_future_return_bps",
+    "entry_price_proxy",
+    "settlement_price_proxy",
+    "proxy_margin_bucket",
+    "proxy_boundary_risk_1bps",
+    "proxy_boundary_risk_2_5bps",
+    "proxy_boundary_risk_5bps",
+    "proxy_boundary_risk_10bps",
+    "sample_weight_margin",
+    "settlement_minute_open_time"
+  ],
+  "sample_weight_metadata": {
+    "sample_weight_uniform": {
+      "role": "sample_weight",
+      "derived_from_target": false,
+      "default_for_baseline": true
+    },
+    "sample_weight_margin": {
+      "role": "sample_weight",
+      "derived_from_target": true,
+      "default_for_baseline": false
+    }
+  },
+  "input_files": {
+    "feature_input_path": "C:\\ai\\BTCUSDT\\data\\model\\BTCUSDT_kline_features_5m_v1.parquet",
+    "label_input_path": "C:\\ai\\BTCUSDT\\data\\model\\BTCUSDT_60m_kline_proxy_labels.parquet",
+    "feature_manifest_path": "C:\\ai\\BTCUSDT\\reports\\stage4_feature_manifest.json",
+    "label_field_dictionary_path": "C:\\ai\\BTCUSDT\\reports\\stage3b_label_field_dictionary.json",
+    "feature_input_sha256": "d48ac5aa27e17e9be9d53eb0be96fd43502f207ba9211aff65566402f3902935",
+    "label_input_sha256": "83fde585d9aa0e14bf0fb0741820b752c64fe8eb7481a8f9232b33b906e38c5a",
+    "feature_manifest_sha256": "0edb0cfb0df991a63da7a5462bf6735db9eea13b41cd9ab5ccac8042c435507c",
+    "label_field_dictionary_sha256": "0254dbea7dcdd09a4b3b42cb5adb50758675ee53f904177277feef41d8f8b292"
+  },
+  "output_files": {
+    "dataset_path": "C:\\ai\\BTCUSDT\\data\\model\\BTCUSDT_60m_direction_dataset_v1.parquet",
+    "split_assignment_path": "C:\\ai\\BTCUSDT\\data\\splits\\BTCUSDT_60m_split_assignments_v1.parquet",
+    "dataset_sha256": "4099f37af884ce221710fd84cf45fcbc06ca786dbb3a2b2b7eb1d4ec1a3187fa",
+    "split_assignment_sha256": "6f99c99a92e8687e63156a80df3f995b44cea12c53aff9ae18efe11037b4070b"
+  },
+  "file_sizes": {
+    "feature_input_bytes": 218577281,
+    "label_input_bytes": 41069516,
+    "dataset_bytes": 246388186,
+    "split_assignment_bytes": 6555521,
+    "config_bytes": 2155,
+    "script_bytes": 49657
+  },
+  "script_hashes": {
+    "config_sha256": "02e97b4f97069c7499fb9f24231cc064f36f2a6e96f488e3d05ccfc2eb1b394a",
+    "script_sha256": "4bc28e2fc120280f06b3d9c5e701ae8dda38949cd24c82460175dffadabe221e"
+  },
+  "generated_at_utc": "2026-07-10T09:00:13.398390+00:00",
+  "row_count": 918780,
+  "column_count": 83
+}
